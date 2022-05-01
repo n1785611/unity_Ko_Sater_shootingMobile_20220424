@@ -87,4 +87,14 @@ public class loppymanager : MonoBehaviourPunCallbacks
 
         textCountPlayer.text = "硈絬计" + currentCount + "/" + maxCount;
     }
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        base.OnPlayerEnteredRoom(newPlayer);
+        print("<color=yellow>6. 產秈┬丁</color>");
+        int currentCount = PhotonNetwork.CurrentRoom.PlayerCount;    //讽玡┬丁计
+        int maxCount = PhotonNetwork.CurrentRoom.MaxPlayers;         //讽玡┬丁程计
+
+        textCountPlayer.text = "硈絬计" + currentCount + "/" + maxCount;
+
+    }
 }
